@@ -1,0 +1,32 @@
+@mixin navbar-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include media-breakpoint-up(md) {
+        bottom: 0;
+        width: 4rem;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+
+        .navbar-collapse {
+            flex-grow: 0;
+            flex-direction: column;
+            width: 100%;
+
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+
+                .nav-item {
+                    width: 100%;
+
+                    .dropdown-menu {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
