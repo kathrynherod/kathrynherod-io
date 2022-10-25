@@ -4,50 +4,67 @@
 @import "../../styles/mixins";
 
 .navbar {
-    max-height: 100vh;
+    padding: 0 1rem;
 
     &-brand {
         margin: 0;
-        padding: 0 0.75rem;
+        padding: 1rem;
 
         &__image {
-            max-width: 2.5rem;
+            margin-right: 1rem;
+            max-width: 3rem;
+        }
+
+        &__title {
+            margin: 0;
         }
     }
 
     &-collapse {
-        .nav-link {
-            display: flex;
+        justify-content: space-between;
+
+        .navbar-nav {
+            font-size: 1.5rem;
+
+            &.routes {
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+
+                .nav-link {
+                    @include animate-underline;
+                    @include media-breakpoint-up(md) {
+                        align-items: center;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        margin: 1rem 1.75rem 0.5rem;
+                    }
+
+                    margin: 1rem 1rem 0.5rem;
+                }
+            }
+
+            &.social {
+                align-items: center;
+                flex-direction: row;
+                @include media-breakpoint-up(md) {
+                    justify-content: flex-end;
+                }
+
+                .nav-link {
+                    padding: 1rem 1.25rem;
+                }
+            }
+
+            .nav-link {
+                font-weight: 600;
+            }
         }
     }
 
     &-toggler {
         border: 0;
         color: white;
-    }
-
-    &.fixed-left {
-        @include navbar-sidebar;
-        @include media-breakpoint-up(md) {
-            right: auto;
-
-            .navbar-nav {
-                .nav-item {
-                    .dropdown-toggle {
-                        &:after {
-                            border-top: 0.25rem solid transparent;
-                            border-left: 0.25rem solid;
-                            border-bottom: 0.25rem solid transparent;
-                            border-right: none;
-                            vertical-align: baseline;
-                        }
-                    }
-
-                    .dropdown-menu {
-                        left: 100%;
-                    }
-                }
-            }
-        }
+        padding: 1rem;
     }
 }

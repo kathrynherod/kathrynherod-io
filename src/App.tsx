@@ -9,7 +9,7 @@ const Routes = () => {
     ]);
 }
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <Routes />

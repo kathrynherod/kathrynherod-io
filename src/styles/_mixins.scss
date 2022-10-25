@@ -1,32 +1,23 @@
-@mixin navbar-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+@mixin animate-underline {
+    display: inline-block;
+    position: relative;
 
-    @include media-breakpoint-up(md) {
+    &::after {
+        background-color: #0087ca;
         bottom: 0;
-        width: 4rem;
-        flex-flow: column nowrap;
-        align-items: flex-start;
+        content: '';
+        height: 0.25rem;
+        left: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 0.25s ease-out;
+        transform-origin: bottom right;
+        width: 100%;
+    }
 
-        .navbar-collapse {
-            flex-grow: 0;
-            flex-direction: column;
-            width: 100%;
-
-            .navbar-nav {
-                flex-direction: column;
-                width: 100%;
-
-                .nav-item {
-                    width: 100%;
-
-                    .dropdown-menu {
-                        top: 0;
-                    }
-                }
-            }
-        }
+    &:hover::after {
+        color: white;
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
