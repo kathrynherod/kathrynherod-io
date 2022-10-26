@@ -11,7 +11,7 @@ const Routes = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes />
     </Router>
   );
