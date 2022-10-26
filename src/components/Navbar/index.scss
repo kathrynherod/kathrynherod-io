@@ -60,6 +60,10 @@
                 font-weight: 600;
             }
         }
+
+        &.show {
+            width: 50vw;
+        }
     }
 
     &-toggler {
