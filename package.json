@@ -2,7 +2,7 @@
   "name": "kathrynherod-io",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://kathrynherod.github.io/kathrynherod-io",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
