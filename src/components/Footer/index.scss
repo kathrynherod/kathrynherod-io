@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+footer {
+    .list-group.list-group-horizontal {
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+
+            svg {
+                color: $dark-blue;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

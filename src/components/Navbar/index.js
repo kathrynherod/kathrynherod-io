@@ -2,27 +2,15 @@ import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom';
 import './index.scss';
 import KatAndOlive from '../../assets/images/kat_and_olive.png';
+import KShadedLogo from '../../assets/images/k-shaded.png';
+import FlatLogo from '../../assets/images/flat-logo.png';
+import KatLogoGray from '../../assets/images/kat-logo-gray.png';
 import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const FixedNavbar = () => {
-    const renderGitHubTooltip = (props) => (
-        <Tooltip id="button-tooltip" {...props}>
-            Github
-        </Tooltip>
-    );
-
-    const renderLinkedInTooltip = (props) => (
-        <Tooltip id="button-tooltip" {...props}>
-            LinkedIn
-        </Tooltip>
-    );
 
     const [show, setShow] = useState(false);
 
@@ -31,32 +19,33 @@ const FixedNavbar = () => {
 
     return (
         <header>
-            <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='sticky-top'>
+            <Navbar collapseOnSelect expand='md' className='sticky-top'>
                 <Navbar.Brand className="d-flex align-items-center" as={Link} to="/">
                     <Image
                         alt='Kathryn Herod and her dog, Olive'
                         className='navbar-brand__image'
                         fluid={true}
-                        roundedCircle={true}
-                        src={KatAndOlive}
+
+                        src={KatLogoGray}
                     />
-                    <h3 className='navbar-brand__title'>Kathryn Herod</h3>
                 </Navbar.Brand>
 
                 <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
 
                 <Navbar.Offcanvas
                     id={'offcanvasNavbar-expand'}
-                    aria-labelledby='offcanvasNavbarLabel-expan'
+                    aria-labelledby='offcanvasNavbarLabel-expand'
+                    backdrop={false}
                     placement="end"
+                    scroll={true}
                 >
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title id={'offcanvasNavbarLabel-expand'}>
-                            Offcanvas
-                        </Offcanvas.Title>
-                    </Offcanvas.Header>
+                    <Offcanvas.Header closeButton />
+
                     <Offcanvas.Body>
                         <Nav className="auto-me routes">
+                            <Nav.Link as={Link} to="/about">
+                                Resumé
+                            </Nav.Link>
                             <Nav.Link as={Link} to="/about">
                                 About
                             </Nav.Link>
@@ -122,6 +111,7 @@ const FixedNavbar = () => {
                 </Navbar.Collapse> */}
             </Navbar>
         </header>
+
     )
 }
 export default FixedNavbar;

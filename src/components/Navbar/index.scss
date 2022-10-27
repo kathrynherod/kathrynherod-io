@@ -2,73 +2,65 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../styles/mixins";
+@import "../../styles/variables";
+
 
 .navbar {
-    padding: 0 1rem;
+    background: $cream;
+    padding: 1rem 1.5rem;
 
     &-brand {
-        margin: 0;
-        padding: 1rem;
-
         &__image {
-            margin-right: 1rem;
-            max-width: 3rem;
-        }
-
-        &__title {
-            margin: 0;
+            max-height: 3rem;
         }
     }
 
-    &-collapse {
-        justify-content: space-between;
+    .navbar-nav {
+        align-items: flex-start;
+        justify-content: flex-end;
+        width: 100%;
 
-        .navbar-nav {
-            font-size: 1.5rem;
-
-            &.routes {
-                align-items: flex-start;
-                justify-content: center;
-                width: 100%;
-
-                .nav-link {
-                    @include animate-underline;
-                    @include media-breakpoint-up(md) {
-                        align-items: center;
-                    }
-                    @include media-breakpoint-up(lg) {
-                        margin: 1rem 1.75rem 0.5rem;
-                    }
-
-                    margin: 1rem 1rem 0.5rem;
-                }
-            }
-
-            &.social {
+        .nav-link {
+            @include animate-underline;
+            @include media-breakpoint-up(md) {
                 align-items: center;
-                flex-direction: row;
-                @include media-breakpoint-up(md) {
-                    justify-content: flex-end;
-                }
-
-                .nav-link {
-                    padding: 1rem 1.25rem;
-                }
             }
 
-            .nav-link {
-                font-weight: 600;
-            }
-        }
-
-        &.show {
-            width: 50vw;
+            color: $dark-blue;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin: 0.25rem 1rem ;
+            padding: 0.25rem;
         }
     }
 
     &-toggler {
-        border: 0;
+        border: none;
         color: white;
         padding: 1rem;
+    }
+}
+
+.offcanvas {
+    background: $light-blue;
+    border: none;
+
+    &-header {
+        justify-content: flex-end;
+        padding: 1rem 1.5rem;
+
+        button.btn-close {
+            margin: 1rem;
+        }
+    }
+
+    &-body {
+        align-items: center;
+        justify-content: center;
+        .navbar-nav {
+            .nav-link {
+
+            }
+        }
     }
 }

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Footer from '../src/components/Footer'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const branding = screen.getByText('Kathryn Herod');
-  expect(branding).toBeInTheDocument();
+test('renders app', async() => {
+  render(<Footer />);
+  const linkedInIcon = await screen.findByTestId('list-group-item=linkedIn');
+  expect(linkedInIcon).toBeInTheDocument();
 });
