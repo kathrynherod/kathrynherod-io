@@ -3,11 +3,11 @@
 footer {
     .list-group.list-group-horizontal {
         .list-group-item {
-            background-color: transparent;
+            background-color: $dark-blue;
             border: none;
 
             svg {
-                color: $dark-blue;
+                color: $cream;
                 font-size: 1.5rem;
             }
         }

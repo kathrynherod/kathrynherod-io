@@ -8,8 +8,8 @@ const Layout = () => {
     return (
         <div className='app'>
             <Navbar/>
-            <section className='d-flex flex-column align-items-center justify-content-center'>
-                <div>
+            <section className='intro'>
+                <div className='container'>
                     <h4>Hey Y'all! I'm</h4>
                     <h2 className='name'>Kathryn Herod</h2>
                     <h3>a <span className='dev'>Front End Developer</span></h3>

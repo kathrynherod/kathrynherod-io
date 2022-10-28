@@ -1,14 +1,30 @@
-section {
-    height: calc(100vh - 8.5625rem);
-    padding: 3rem 4rem;
+@import "../../styles/variables";
 
-    .name {
-        font-family: 'Vast Shadow', cursive;
-        font-size: 3rem;
-    }
+section.intro {
+    .container {
+        color: $light-blue;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 8.5625rem);
+        justify-content: center;
+        max-width: 80vw;
+        padding: 3rem 4rem;
 
-    .dev {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 2rem;
+        .name {
+            color: $cream;
+            font-family: 'Vast Shadow', cursive;
+            font-size: 3rem;
+        }
+
+        .dev {
+            color: $red;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 2rem;
+            margin-left: 0.5rem;
+        }
+
+        p {
+            color: white;
+        }
     }
 }
