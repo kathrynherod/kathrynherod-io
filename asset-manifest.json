@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/kathrynherod-io/static/css/main.d4597f26.css",
-    "main.js": "/kathrynherod-io/static/js/main.f7b9cf8b.js",
+    "main.css": "/kathrynherod-io/static/css/main.8c53c387.css",
+    "main.js": "/kathrynherod-io/static/js/main.e20772e5.js",
     "static/js/787.4f757d8e.chunk.js": "/kathrynherod-io/static/js/787.4f757d8e.chunk.js",
-    "static/media/kat_and_olive.png": "/kathrynherod-io/static/media/kat_and_olive.1630b45513bfcf5b6b22.png",
     "index.html": "/kathrynherod-io/index.html",
-    "main.d4597f26.css.map": "/kathrynherod-io/static/css/main.d4597f26.css.map",
-    "main.f7b9cf8b.js.map": "/kathrynherod-io/static/js/main.f7b9cf8b.js.map",
+    "main.8c53c387.css.map": "/kathrynherod-io/static/css/main.8c53c387.css.map",
+    "main.e20772e5.js.map": "/kathrynherod-io/static/js/main.e20772e5.js.map",
     "787.4f757d8e.chunk.js.map": "/kathrynherod-io/static/js/787.4f757d8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4597f26.css",
-    "static/js/main.f7b9cf8b.js"
+    "static/css/main.8c53c387.css",
+    "static/js/main.e20772e5.js"
   ]
 }
