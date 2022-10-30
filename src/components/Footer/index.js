@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,34 +21,35 @@ const Footer = () => {
 
     return (
         <footer>
-            <ListGroup horizontal>
-                <ListGroup.Item data-testid="list-group-item=linkedIn">
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 250, hide: 400 }}
-                        overlay={renderLinkedInTooltip}
-                        trigger={['hover', 'focus']}
-                    >
+            <div className='button-group'>
+                <OverlayTrigger
+                    placement="bottom"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderLinkedInTooltip}
+                    trigger={['hover', 'focus']}
+                >
+                    <Button>
                         <FontAwesomeIcon
                             icon={faLinkedin}
                             color="white"
                         />
-                    </OverlayTrigger>
-                </ListGroup.Item>
-                <ListGroup.Item>
+                    </Button>
+                </OverlayTrigger>
+
                 <OverlayTrigger
                     placement="bottom"
                     delay={{ show: 250, hide: 400 }}
                     overlay={renderGitHubTooltip}
                     trigger={['hover', 'focus']}
                 >
-                    <FontAwesomeIcon
-                        icon={faGithub}
-                        color="white"
-                    />
+                    <Button>
+                        <FontAwesomeIcon
+                            icon={faGithub}
+                            color="white"
+                        />
+                    </Button>
                 </OverlayTrigger>
-                </ListGroup.Item>
-            </ListGroup>
+            </div>
         </footer>
     );
 }

@@ -1,9 +1,11 @@
 @import "../../styles/variables";
 
 footer {
-    .list-group.list-group-horizontal {
-        .list-group-item {
-            background-color: $dark-blue;
+    .button-group {
+        padding: 1rem 1.5rem;
+
+        button.btn.btn-primary {
+            background: transparent;
             border: none;
 
             svg {

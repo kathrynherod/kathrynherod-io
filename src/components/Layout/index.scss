@@ -1,30 +1,40 @@
 @import "../../styles/variables";
 
 section.intro {
-    .container {
+    &__container {
         color: $light-blue;
         display: flex;
-        flex-direction: column;
-        height: calc(100vh - 8.5625rem);
-        justify-content: center;
-        max-width: 80vw;
-        padding: 3rem 4rem;
+        height: calc(100vh - 153px);
+        overflow-y: auto;
+        padding: 1rem;
 
-        .name {
-            color: $cream;
-            font-family: 'Vast Shadow', cursive;
-            font-size: 3rem;
-        }
+        .intro__text {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
 
-        .dev {
-            color: $red;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 2rem;
-            margin-left: 0.5rem;
-        }
+            .hey {
+                font-size: 1.25rem;
+            }
 
-        p {
-            color: white;
+            .name {
+                color: $cream;
+                font-family: 'Vast Shadow', cursive;
+                font-size: 3rem;
+            }
+
+            .dev {
+                color: $red;
+                font-family: 'Source Code Pro', monospace;
+                font-size: 2rem;
+                margin-left: 0.5rem;
+            }
+
+            p {
+                color: $cream;
+                font-size: 1.125rem;
+            }
         }
     }
 }

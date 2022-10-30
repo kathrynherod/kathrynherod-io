@@ -4,13 +4,13 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-.navbar {
+nav.navbar {
     background: $dark-blue;
     padding: 1rem 1.5rem;
 
-    &-brand {
+    .navbar-brand {
         &__image {
-            max-height: 3rem;
+            max-height: 2.5rem;
         }
     }
 
@@ -33,28 +33,34 @@
         }
     }
 
-    &-toggler {
+    .navbar-toggler {
         border: none;
-        color: $cream;
+        color: $cream !important;
         padding: 1rem;
     }
 }
 
-.offcanvas {
-    background: $light-blue;
+.offcanvas.offcanvas-end {
+    background: $dark-blue;
     border: none;
 
-    &-header {
+    .offcanvas-header {
         justify-content: flex-end;
         padding: 1rem 1.5rem;
 
         button.btn-close {
+            color: $cream;
             margin: 1rem;
         }
     }
 
-    &-body {
-        align-items: center;
-        justify-content: center;
+    .offcanvas-body {
+        .navbar-nav {
+            color: $cream;
+            display: flex;
+            font-size: 1.25rem;
+            font-weight: 400;
+            justify-content: center;
+        }
     }
 }

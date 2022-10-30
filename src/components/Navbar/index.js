@@ -6,6 +6,8 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const FixedNavbar = () => {
     return (
@@ -15,13 +17,16 @@ const FixedNavbar = () => {
                     <Image
                         alt='Kathryn Herod and her dog, Olive'
                         className='navbar-brand__image'
-                        fluid={true}
-
                         src={KatLogoGray}
                     />
                 </Navbar.Brand>
 
-                <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
+                <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'}>
+                    <FontAwesomeIcon
+                        color="white"
+                        icon={faBars}
+                    />
+                </Navbar.Toggle>
 
                 <Navbar.Offcanvas
                     id={'offcanvasNavbar-expand'}
@@ -30,7 +35,7 @@ const FixedNavbar = () => {
                     placement="end"
                     scroll={true}
                 >
-                    <Offcanvas.Header closeButton />
+                    <Offcanvas.Header closeButton closeVariant="white"/>
 
                     <Offcanvas.Body>
                         <Nav className="auto-me routes">
