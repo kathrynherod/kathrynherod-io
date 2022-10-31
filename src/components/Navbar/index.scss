@@ -21,9 +21,6 @@ nav.navbar {
 
         .nav-link {
             @include animate-underline;
-            @include media-breakpoint-up(md) {
-                align-items: center;
-            }
 
             color: $cream;
             font-size: 1.25rem;
@@ -60,7 +57,6 @@ nav.navbar {
             display: flex;
             font-size: 1.25rem;
             font-weight: 400;
-            justify-content: center;
         }
     }
 }

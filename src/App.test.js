@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import Footer from '../src/components/Footer'
 
-test('renders app', async() => {
+test('renders footer & buttons', async() => {
   render(<Footer />);
-  const linkedInIcon = await screen.findByTestId('list-group-item=linkedIn');
-  expect(linkedInIcon).toBeInTheDocument();
+  const linkedInButton = await screen.findByTestId('linkedIn-button');
+  expect(linkedInButton).toBeInTheDocument();
+
+  const githubButton = await screen.findByTestId('github-button');
+  expect(githubButton).toBeInTheDocument();
 });

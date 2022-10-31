@@ -2,6 +2,7 @@ import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom';
 import './index.scss';
 import KatLogoGray from '../../assets/images/kat-logo-gray.png';
+import Resume from '../../assets/files/KathrynHerod_FEDev_22.pdf';
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -35,18 +36,17 @@ const FixedNavbar = () => {
                     placement="end"
                     scroll={true}
                 >
-                    <Offcanvas.Header closeButton closeVariant="white"/>
-
+                <Offcanvas.Header closeButton closeVariant="white"/>
                     <Offcanvas.Body>
-                        <Nav className="auto-me routes">
-                            <Nav.Link as={Link} to="/about">
+                        <Nav className="auto-me">
+                            <Nav.Link href={Resume} target="_blank">
                                 Resumé
                             </Nav.Link>
                             <Nav.Link as={Link} to="/about">
                                 About
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/portfolio">
-                                Portfolio
+                            <Nav.Link as={Link} to="/work">
+                                Work
                             </Nav.Link>
                             <Nav.Link as={Link} to="/contact">
                                 Contact

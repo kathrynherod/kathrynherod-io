@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 const element = document.getElementById('root');
-const root = createRoot(element!);
+const root = createRoot(element);
 
 root.render(
     <React.StrictMode>

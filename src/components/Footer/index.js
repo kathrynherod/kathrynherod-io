@@ -7,14 +7,14 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './index.scss';
 
 const Footer = () => {
-    const renderGitHubTooltip = (props) => (
-        <Tooltip id="button-tooltip" {...props}>
+    const renderGitHubTooltip = () => (
+        <Tooltip id='button-tooltip'>
             Github
         </Tooltip>
     );
 
-    const renderLinkedInTooltip = (props) => (
-        <Tooltip id="button-tooltip" {...props}>
+    const renderLinkedInTooltip = () => (
+        <Tooltip id='button-tooltip'>
             LinkedIn
         </Tooltip>
     );
@@ -23,29 +23,39 @@ const Footer = () => {
         <footer>
             <div className='button-group'>
                 <OverlayTrigger
-                    placement="bottom"
+                    placement='top'
                     delay={{ show: 250, hide: 400 }}
                     overlay={renderLinkedInTooltip}
                     trigger={['hover', 'focus']}
                 >
-                    <Button>
+                    <Button
+                        data-testid='linkedIn-button'
+                        href='https://linkedin.com/in/kathrynherod/'
+                        variant="link"
+                        target='_blank'
+                    >
                         <FontAwesomeIcon
                             icon={faLinkedin}
-                            color="white"
+                            color='white'
                         />
                     </Button>
                 </OverlayTrigger>
 
                 <OverlayTrigger
-                    placement="bottom"
+                    placement='top'
                     delay={{ show: 250, hide: 400 }}
                     overlay={renderGitHubTooltip}
                     trigger={['hover', 'focus']}
                 >
-                    <Button>
+                    <Button
+                        data-testid='github-button'
+                        href='https://github.com/kathrynherod'
+                        variant="link"
+                        target='_blank'
+                    >
                         <FontAwesomeIcon
                             icon={faGithub}
-                            color="white"
+                            color='white'
                         />
                     </Button>
                 </OverlayTrigger>
