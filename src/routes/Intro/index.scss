@@ -1,13 +1,7 @@
-@import "../../../styles/variables";
+@import "../../styles/variables";
 @import '~bootstrap/scss/bootstrap';
 
 section.intro__container  {
-    color: $light-blue;
-    display: flex;
-    height: calc(100vh - 153px);
-    overflow-y: auto;
-    padding: 1rem;
-
     .intro__text {
         align-self: center;
         display: flex;
@@ -20,6 +14,7 @@ section.intro__container  {
         }
 
         .name {
+            animation-duration: 2s;
             color: $cream;
             font-family: 'Vast Shadow', cursive;
             font-size: 3rem;
@@ -42,8 +37,6 @@ section.intro__container  {
 
 @include media-breakpoint-up(sm) {
     section.intro__container {
-        padding: 1.5rem;
-
         .intro__text {
             padding: 1rem;
 
@@ -64,8 +57,6 @@ section.intro__container  {
 
 @include media-breakpoint-up(md) {
     section.intro__container {
-        padding: 2rem;
-
         .intro__text {
             padding: 1.5rem;
 
@@ -90,34 +81,6 @@ section.intro__container  {
 
 @include media-breakpoint-up(lg) {
     section.intro__container {
-        padding: 2.5rem;
-
-        .intro__text {
-            padding: 2rem;
-
-            .hey {
-                font-size: 2.5rem;
-            }
-
-            .name {
-                font-size: 4rem;
-            }
-
-            .dev {
-                font-size: 3rem;
-            }
-
-            p {
-                font-size: 1.75rem;
-            }
-        }
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    section.intro__container {
-        padding: 4rem;
-
         .intro__text {
             padding: 2.5rem;
         }
@@ -126,8 +89,6 @@ section.intro__container  {
 
 @include media-breakpoint-up(xl) {
     section.intro__container {
-        padding: 6rem;
-
         .intro__text {
             max-width: 100rem;
             padding: 4rem;

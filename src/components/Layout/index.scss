@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+@import '~bootstrap/scss/bootstrap';
+
+section {
+    color: $light-blue;
+    display: flex;
+    height: calc(100vh - 153px);
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    section {
+        padding: 2rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    section {
+        padding: 4rem;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    section {
+        padding: 6rem;
+    }
+}
